@@ -6,8 +6,6 @@ Python 3.7 is needed to play this game.
 
 ## How To Run The Program
 
-clone this repository and paste into run
-
 python game.py
 
 ## Collaboration
