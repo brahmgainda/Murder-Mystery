@@ -26,4 +26,3 @@ numer_list('Suspects', suspects)
 numer_list("Clues", clues)
 numer_list("Extra Clues", extra_clues)
 numer_list("Extra Supects", extra_suspects)
-
