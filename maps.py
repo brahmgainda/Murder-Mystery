@@ -1,19 +1,22 @@
 # Course: CS 30
 # Period: 1
 # Date created: 20/10/16
-# Date last modified: 20/10/16
+# Date last modified: 20/10/19
 # Name: Brahm Gainda
 # Description: RPG modules and maps
 
 from tabulate import tabulate
 
 # defining map
+
+
 def print_map():
     """Function for printing grid map of Murder Mystery game"""
     map = [['', 'Interrogation Room'],
            ['Empty Fields   ', 'The Gangs House', 'Empty Fields'],
            ['', 'Crime Scene', ]]
     print(tabulate(map, tablefmt="grid"))
+
 
 # creating a class for the rooms in the map
 class Map:

@@ -1,6 +1,9 @@
 # Change Log 
 Includes all important changes to the RPG adventure game.
 
+**v0.3 - Prerelease**
+- Added maps v0.1
+
 **v0.2 - Prerelease**
 - Added pseudocode v0.1
 - Updated game.py file to have numerical lists
