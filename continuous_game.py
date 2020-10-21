@@ -1,15 +1,16 @@
 # Course: CS 30
 # Period: 1
 # Date created: 20/10/7
-# Date last modified: 20/10/14
+# Date last modified: 20/10/21
 # Name: Brahm Gainda
 # Description: RPG Continuous Game Play
 
+# Empty Lists Used To Add Iteams Into
 Suspects = []
 Clues = []
 Persuasion_points = {}
 
-# prompts
+# Prompts Used as User Input
 interrogate = "Who would you like to interrogate first?\n> "
 
 clues_message = "Would you like to search for more (yes/no)?"
@@ -23,7 +24,7 @@ extraclue2_found = "You found an extra clue 'Gun with Bills finger prints'\
 message = "What would you like to do first?\
 Check Suspects List, Check Clues, Check persuasion points"
 
-# Intro Messages
+# Intro Messages Explaining The Game
 print("enter 'quit' at any time to quit ")
 print("\nYou're a famouse detective who has been kidnapped by a deadly gang.")
 print("They tell you that a member of they're group has been \
@@ -37,8 +38,8 @@ to get persuasion points against suspects \
 and solve the case so you're life is spared")
 print("\nWhat would you like to do first?")
 
-# game info
-suspects_list = ['Bill', 'Shaniqua', 'Steven', 'Sam']  
+# Fixed Game Info That Is Used Throughout The Code
+suspects_list = ['Bill', 'Shaniqua', 'Steven', 'Sam']
 
 clues = ['Bills shoe at crime scene = 2 p.p.', 'Bills DNA at crime scene\
 = 2 p.p']
@@ -52,10 +53,11 @@ persuasion_points = {
 
 hours_left = 24
 
-# game functions
+# Functions Used Throughout The Game
 
 
 def game_input(message):
+    "Ends the program if the user inputs 'quit' "
     choice = input(message)
     if choice.lower() == "quit":
         exit()
@@ -63,14 +65,16 @@ def game_input(message):
 
 
 def investigation(hours_left):
+    "Returns The # of turns the user has left in the game"
     while hours_left > 0:
         message = (f"""
 Check Suspects List, Check Clues, Check Persuasion Points
 (You have {hours_left} hours left)
 > \
 """)
+        # Prompt That Asks The User Their Desired Path
         x = game_input(message)
-        # Suspects path
+        # Suspects path, One Path The User Could Use
         if x.lower() == "check suspects list":
             print('\nSuspects: ' + ', '.join(suspects_list))
             choice = game_input(interrogate)
@@ -92,7 +96,7 @@ and you have 2 persuasion points againt them")
                 print("\nThat isn't a suspect")
                 continue
 
-                # clues path
+                # Clues Path, A Path The User Could Choose
         if x.lower() == "check clues":
             print("\nHere are the clues you have:")
             print(clues)
@@ -113,7 +117,7 @@ and you have 2 persuasion points againt them")
                 print("That isn't a choice")
                 continue
 
-        # persuasion points path
+        # Persuasion Points Path, Another Path The User Could Choose
         if x.lower() == "check persuasion points":
             print("\nHere are the persuasion points you have:")
             print(persuasion_points)
@@ -129,11 +133,11 @@ and you have 2 persuasion points againt them")
                 print("That isn't a choice")
                 continue
 
-            # quit
+            # Quit, Incase The User Wants To Stop The Program
             if x.lower() == "quit":
                 hours_left = 0
                 exit()
-
+            # Incase The User Inputs An Unknown Input
         else:
             print("\nYou did not pick one of the available options")
             print("try again")
