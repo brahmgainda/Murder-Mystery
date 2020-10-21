@@ -67,11 +67,11 @@ def game_input(message):
 def investigation(hours_left):
     "Returns The # of turns the user has left in the game"
     while hours_left > 0:
-        message = (f"""
+        message = """
 Check Suspects List, Check Clues, Check Persuasion Points
-(You have {hours_left} hours left)
+(You have {} hours left)
 > \
-""")
+""".format(hours_left)
         # Prompt That Asks The User Their Desired Path
         x = game_input(message)
         # Suspects path, One Path The User Could Use
@@ -79,7 +79,7 @@ Check Suspects List, Check Clues, Check Persuasion Points
             print('\nSuspects: ' + ', '.join(suspects_list))
             choice = game_input(interrogate)
             if choice.lower() in Suspects:
-                print(f"You've already interrogated {choice}")
+                print("You've already interrogated {}".format(choice))
                 continue
             if choice.lower() == "bill" or \
                choice.lower() == "shaniqua" or \
