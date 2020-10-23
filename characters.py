@@ -77,12 +77,14 @@ crime_scene = Map("Crime Scene", "is where the murder occurred\
 and where you look for clues")
 empty_fields = Map("Empty Fields", "you go to think in silence")
 
-message = "Where would you like to go first?\
+# asks the user where they want to go on map
+message = "Print 'map' to see map\
+Where would you like to go first?\
 Interrogation Room, The Gangs House, Crime Scene, Empty Fields "
 
 keypress = input(message)
 
-# map
+# where the user goes when they input
 if keypress.lower() == "map":
     print_map()
 if keypress.lower() == "interrogation room":
