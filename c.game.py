@@ -5,6 +5,9 @@
 # Name: Brahm Gainda
 # Description: RPG Continuous Game Play
 
+from menu.py import menu
+from characters.py import Suspect
+
 # Empty Lists Used To Add Iteams Into
 Suspects = []
 Clues = []
