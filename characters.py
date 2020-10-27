@@ -8,6 +8,8 @@
 from tabulate import tabulate
 
 # Classes For Suspects
+
+
 class Suspect:
     """Parent class for primary/secondary suspects"""
     def __init__(self, name, trait):
